@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @cleaner.username %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cleaner.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cleaner.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cleaner.location %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @cleaner.phone %>
+</p>
+
+<%= link_to 'Edit', edit_cleaner_path(@cleaner) %> |
+<%= link_to 'Back', cleaners_path %>

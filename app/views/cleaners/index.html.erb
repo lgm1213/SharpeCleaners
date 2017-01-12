@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cleaners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cleaners.each do |cleaner| %>
+      <tr>
+        <td><%= cleaner.username %></td>
+        <td><%= cleaner.name %></td>
+        <td><%= cleaner.email %></td>
+        <td><%= cleaner.location %></td>
+        <td><%= cleaner.phone %></td>
+        <td><%= link_to 'Show', cleaner %></td>
+        <td><%= link_to 'Edit', edit_cleaner_path(cleaner) %></td>
+        <td><%= link_to 'Destroy', cleaner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cleaner', new_cleaner_path %>
