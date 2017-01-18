@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112225600) do
+ActiveRecord::Schema.define(version: 20170118012604) do
 
   create_table "cleaners", force: :cascade do |t|
     t.string   "username"
-    t.string   "name"
     t.string   "email"
-    t.string   "location"
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
   end
 
   create_table "landings", force: :cascade do |t|
@@ -29,12 +33,16 @@ ActiveRecord::Schema.define(version: 20170112225600) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
-    t.string   "name"
     t.string   "email"
-    t.string   "location"
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "firstname"
+    t.string   "lastname"
   end
 
 end
